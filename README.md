@@ -1,11 +1,23 @@
-# Noah Canen
-## COSC 3750 - Simple ls Assignment
-## Submission date: 02/27/26
+# COSC 3750 - Homework 04 (`gols`)
 
-## Worked with/sources
-* COSC3750_SimpleLS_Assignment.pdf
-* GNU ls man page (ls-man.txt)
-* Go documentation: https://go.dev/doc/
+This project implements a simplified Unix-like `ls` clone with the required flags:
 
-## Project Quirks/ Things that don't work
-* None - all required functionality working as expected
+- `-a` include dot entries and hidden files
+- `-l` long listing format
+- `-n` numeric uid/gid (implies `-l`)
+- `-h` human-readable size (base 1024, meaningful with `-l`)
+- `-R` recursive traversal
+
+## Run
+
+```bash
+go run .
+go run . -l
+go run . -l -a -R
+```
+
+## Build
+
+```bash
+go build -o gols .
+```
